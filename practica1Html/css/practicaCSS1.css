@@ -22,3 +22,16 @@ footer button:hover {
     width: 100px;
     background-color: #160e12;
 }
+
+header div#centrado{
+    /*definir grosor, estilo y color del borde*/
+    border: 2px solid black;
+    /*redondear esquinas*/
+    border-radius: 1%;
+    /*espaciado interno*/
+    padding: 2px;
+    text-align: center;
+    /* negro con 30% de opacidad */
+    background-color: rgba(0, 0, 3, 0.3); 
+}
+
