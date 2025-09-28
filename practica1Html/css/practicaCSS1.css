@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 h1{
-   font-family: "SUSE Mono", sans-serif;
+   font-family: "Bitcount Prop Single Ink", sans-serif;
+   /* 3. Sombra de Texto */
+   /*2px desplazamiento X, 2px desplazamiento Y, 3px difuminado, color negro semi-transparente */
+   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); 
+}
+
+p:nth-child(odd){
+    color: blueviolet;
+    /* Degradado de colores lo paso para este ejecicio iba en el uno, pero no quedaba bien*/
+    background: linear-gradient(90deg, #160e12, #00c3ff); 
+}
+
+footer button a{
+    text-decoration: none;
+}
+
+footer button:hover {
+    font-family: "Bitcount Prop Single Ink";
+    width: 100px;
+    background-color: #160e12;
 }

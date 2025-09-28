@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link fuente google -->
-    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    
-    <!-- mis estilos css -->
+
      <link rel="stylesheet" href="./css/practicaCSS1.css">
-     
+
     <title>Primer HTML de practica</title>
 </head>
 <body>
@@ -20,33 +17,34 @@
         <li><a href="#tabla">Tabla</a></li>
 
     </nav>
-    <main>
+    <header>
         <H1 id="tituloMain">Mi primer HTML</H1>
         <h2>Titulo h2</h2>
         <h3>Titulo h3</h3>
         <h4>Titulo h4</h4>
         <h5>Titulo h5</h5>
         <h6>Titulo h6</h6>
-
+    </header>
+    <main>
         <p>Parafo sin nada</p>
         <p><br> Parrafo con br</p>
         <p>Parrafo con <span style="font-size: 20px; font-weight: bold;">span</span></p>
 
         
-        <div id="enlaces">
+        <section id="enlaces">
             <h3>Lista de enlaces</h3>
             <li><a href="https://github.com/monick96" target="_blank">Mi gitHub</a></li>
             <li><a href="mailto:">Escribir email</a></li>
             <li><a href="#tituloMain">ir a titulo</a></li>
-        </div>
+        </section>
         
-        <div id="imagenes">
+        <section id="imagenes">
             <h3>Insertar imagenes</h3>
             <img id="imagenLocal" src="./img/Captura de pantalla 2025-09-23 154559.png" alt="imagen porcion de codigo mostrando ejemplo de destructuring de un array en js " width="30%">
             <img id="imagenExterna" src="https://isabelluna.com/wp-content/uploads/2017/12/Anatomia-de-una-URL.jpg" alt="imagen que muestra anatmia de una url" width="30%">
-        </div>
+        </section>
 
-        <div id="listas">
+        <section id="listas">
             <h3>Listas</h3>
             <ul>
                 <li>Item1</li>
@@ -66,9 +64,9 @@
                 <dt>CSS</dt>
                 <dd>Cascade style sheet, se utiliza para dar estilo al HTML.</dd>
             </dl>
-        </div>
+        </section>
 
-        <div id="tabla">
+        <section id="tabla">
             <h3>Dibujar tabla</h3>
             <table>
                 <thead>
@@ -88,13 +86,18 @@
                 </tbody>
 
             </table>
-        </div>
+        </section>
 
-        <div>
+        <section>
             <h3>Iframe navegable Teatro Colón</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104982.67183659083!2d-58.52368401303915!3d-34.68730593899835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630121623%3A0x53386f2ac88991a9!2sTeatro%20Col%C3%B3n!5e0!3m2!1ses-419!2sar!4v1759009403599!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </section>
+
+        <footer>
+            <button id="botonIrArriba" onclick="cambiarEstiloBotorIrArriba()"><a href="#tituloMain">IR ARRIBA⬆️</a></button>
+        </footer>
 
     </main>
+    <script src="./js/main.js"></script>
 </body>
 </html>
