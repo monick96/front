@@ -6,7 +6,7 @@ let filtrarPares = (array)=>{
     
     array.forEach(num => {
 
-        if(num%2 == 0){
+        if(num % 2 == 0){
 
             arrayNumerosFiltrados.push(num);
 
@@ -43,4 +43,14 @@ let imprimirLento = (array)=>{
     }, 1000);
 }
 
-module.exports = {ARRAY_NUMEROS, filtrarPares, calcularPomedio, imprimirLento};
+/**Operación con Callback
+Crear una función que reciba un callback y dos números, aplique el callback y
+devuelva el resultado. Implementar al menos dos callbacks diferentes. */
+let operar = (a, b, callback)=>{
+
+    return callback(a,b);
+
+} 
+
+
+module.exports = {ARRAY_NUMEROS, filtrarPares, calcularPomedio, imprimirLento, operar};
