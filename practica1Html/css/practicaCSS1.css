@@ -35,3 +35,14 @@ header div#centrado{
     background-color: rgba(0, 0, 3, 0.3); 
 }
 
+section#imagenes{
+    border: 2px solid black;
+    width: 50%;
+    padding: 5%;
+}
+
+section#enlaces{
+    border: 2px solid black;
+    width: 50%;
+    padding: 5%;
+}
