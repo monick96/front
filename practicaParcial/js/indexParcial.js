@@ -35,11 +35,13 @@ let obtenerTareas = ()=>{
 
     arrayTareas.forEach((el)=>{
 
-        items = '<li>' + el + '</li>';
+        items += '<li>' + el + '</li>';
 
-        //innerHTML agrega html + texto
-        document.getElementById('listaArray').innerHTML = items;
+        
     })
+
+    //innerHTML agrega html + texto
+    document.getElementById('listaArray').innerHTML = items;
 
     console.log(items);
     
