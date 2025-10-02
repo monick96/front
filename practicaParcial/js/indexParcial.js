@@ -29,7 +29,7 @@ let saludar = ()=>{
 
 let obtenerTareas = ()=>{
 
-    let arrayTareas = ['EStudiar Arrays', 'Correr 10 min', 'Tomar agua', 'Bañarse', 'Pensar la cena', 'Estudiar back'];
+    let arrayTareas = ['Estudiar Arrays', 'Correr 10 min', 'Tomar agua', 'Bañarse', 'Pensar la cena', 'Estudiar back'];
 
     let items = "";
 
@@ -37,7 +37,6 @@ let obtenerTareas = ()=>{
 
         items += '<li>' + el + '</li>';
 
-        
     })
 
     //innerHTML agrega html + texto
