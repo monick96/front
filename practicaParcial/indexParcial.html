@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleParcial.css">
+    <title>Practica parcial</title>
+</head>
+<body>
+    <!-- Encabezado de la pagina -->
+    <header>
+        <h1>Practicando para el parcial de frontend💻🤓</h1>
+    </header>
+
+    <!-- seccion principal de la pagina -->
+    <main>
+
+        <h2>Vamos a practicar eventos con js </h2>
+        <input type="text" placeholder="👋🏽Ingrese su nombre...">
+        <button onclick="saludar()">saludar</button>
+        <p id="pDeInstruccion">aca veremos un saludo personalizado al dar click en saludar(esta etiqueta 'p' desaparecera mientras ocurre y aparecera nuevamente despues de 3 seg aprox) </p>
+        <h3 id="etiquetaSaludo"></h3>
+
+        <section >
+            <h2>Lista de tareas</h2>
+            <ul id="listaArray"></ul>
+            <button onclick="obtenerTareas()">obtener tareas</button>
+        </section>
+
+    </main>
+    
+    <!-- pie de la pagina -->
+    <footer>
+        <p>Aca arranca el footer ⬇️</p>
+        <h4>Estudiante: Monica Melgarejo</h4>
+    </footer>
+    <script src="./js/indexParcial.js"></script>
+</body>
+</html>
