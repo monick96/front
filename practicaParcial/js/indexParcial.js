@@ -20,6 +20,7 @@ let saludar = ()=>{
         pInstruccion.hidden = false;
         
         h3Saludo.style.cssText = 'color:red;'
+        //innerText agrega solo texto ya debemos tener la etiqueta lista
         h3Saludo.innerText = "ya salude...";
 
     }, 3000);
@@ -27,17 +28,21 @@ let saludar = ()=>{
 }
 
 let obtenerTareas = ()=>{
-    
+
     let arrayTareas = ['EStudiar Arrays', 'Correr 10 min', 'Tomar agua', 'Bañarse', 'Pensar la cena', 'Estudiar back'];
 
     let items = "";
 
     arrayTareas.forEach((el)=>{
 
-        items += '<li>' + el + '</li>';
+        items = '<li>' + el + '</li>';
 
+        //innerHTML agrega html + texto
         document.getElementById('listaArray').innerHTML = items;
     })
+
+    console.log(items);
+    
     
 }
 
