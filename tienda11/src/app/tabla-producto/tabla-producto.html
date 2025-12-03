@@ -1,1 +1,19 @@
-<p>tabla-producto works!</p>
+<!-- tabla-productos.html -->
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of productos; track item) {
+            <tr>
+                <td>{{item.nombre}}</td>
+                <td>{{item.precio}}</td>
+                <td>{{item.stock}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

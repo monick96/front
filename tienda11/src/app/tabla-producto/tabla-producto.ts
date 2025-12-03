@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Productos } from '../services/productos';
 
 @Component({
   selector: 'app-tabla-producto',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './tabla-producto.css',
 })
 export class TablaProducto {
-
+  private productoService = inject(Productos);
+  
+  get productos(){
+    return this.productoService.arrayProductos;
+  }
 }
