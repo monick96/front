@@ -1,3 +1,20 @@
 table{
-    max-width: 60%;
+   /* max-width: 60%; */
+    border: solid black 1px;
+}
+
+table th, td{
+    border: solid black 1px;
+}
+
+table thead tr{
+    background-color: aquamarine;
+}
+
+table tbody tr:hover{
+    background-color: rgb(230, 188, 125);
+}
+
+table tbody .sinStock{
+    background-color: rgb(146, 59, 59);
 }

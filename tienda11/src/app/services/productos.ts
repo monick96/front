@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Productos {
+  private _urlApiProductos = 'https://dummyjson.com/products';
+  private _http = inject(HttpClient);
+
   arrayProductos = [
     {
       nombre:"Laptop",
@@ -21,5 +25,10 @@ export class Productos {
       stock:10
     }
   ]
+
+  getProductosFromApi(){
+    return this._http.get<any>(this._urlApiProductos);
+  }
+
   
 }
