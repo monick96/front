@@ -1,5 +1,5 @@
 table{
-   /*ng max-width: 60%; */
+   max-width: 100%; 
     border: solid black 1px;
 }
 
@@ -17,4 +17,26 @@ table tbody tr:hover{
 
 table tbody .sinStock{
     background-color: rgb(146, 59, 59);
+}
+
+div.containerTable{
+
+    width: 70%;
+}
+
+div#formularioEdicion {
+    width: 30%;
+}
+
+div#formularioEdicion form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+div.container{
+    display: flex;
+    gap: 4px;
+    
 }

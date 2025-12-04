@@ -1,52 +1,56 @@
 <!-- tabla-productos.html -->
-<table>
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>accion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- productos desde un array local en producto service -->
-        <!-- @for (item of productos; track item) {
-            <tr [class.sinStock] = "item.stock == 0">
-                <td>{{item.nombre}}</td>
-                <td>{{item.precio}}</td>
-                <td>{{item.stock}}</td>
-            </tr>
-        } -->
-        <!-- productos desde api -->
-        @for (item of productosFromApi; track item) {
-            <tr [class.sinStock] = "item.stock == 0">
-                <td>{{item.title}}</td>
-                <td>${{item.price}}</td>
-                <td>{{item.stock}}</td>
-                <td><button (click)="editarProducto(item)">editar✏️</button></td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="container">
 
-<div>
-    <!-- <h5>Total precio productos: $ {{totalPrecios}}</h5> -->
-     <h5>Total precio productos desde api: $ {{totalPreciosApi}}</h5>
-</div>
+    <div class="containerTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- productos desde un array local en producto service -->
+                <!-- @for (item of productos; track item) {
+                    <tr [class.sinStock] = "item.stock == 0">
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.precio}}</td>
+                        <td>{{item.stock}}</td>
+                    </tr>
+                } -->
+                <!-- productos desde api -->
+                @for (item of productosFromApi; track item) {
+                    <tr [class.sinStock] = "item.stock == 0">
+                        <td>{{item.title}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.stock}}</td>
+                        <td><button (click)="editarProducto(item)">editar✏️</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-<!-- new FormControl editar -->
-<div>
-    <form [formGroup]="formEditarProducto" (ngSubmit)="guardarCambios()">
-        <label>Nombre:</label>
-        <input type="text" formControlName="title">
+    
+        <!-- <h5>Total precio productos: $ {{totalPrecios}}</h5> -->
+        <h5>Total precio productos desde api: $ {{totalPreciosApi}}</h5>
+    </div>
 
-        <label>Precio:</label>
-        <input type="number" formControlName="price">
+    <!-- new FormControl editar -->
+    <div id="formularioEdicion">
+        <form [formGroup]="formEditarProducto" (ngSubmit)="guardarCambios()">
+            <label>Nombre:</label>
+            <input type="text" formControlName="title">
 
-        <label>Stock:</label>
-        <input type="number" formControlName="stock">
+            <label>Precio:</label>
+            <input type="number" formControlName="price">
 
-        <button type="submit" >Guardar</button>
+            <label>Stock:</label>
+            <input type="number" formControlName="stock">
 
-    </form>
+            <button type="submit" >Guardar</button>
+
+        </form>
+    </div>
 </div>
