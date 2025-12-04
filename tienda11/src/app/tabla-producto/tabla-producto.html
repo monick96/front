@@ -23,7 +23,7 @@
                 <td>{{item.title}}</td>
                 <td>${{item.price}}</td>
                 <td>{{item.stock}}</td>
-                <td><button>editar✏️</button></td>
+                <td><button (click)="editarProducto(item)">editar✏️</button></td>
             </tr>
         }
     </tbody>
@@ -32,4 +32,21 @@
 <div>
     <!-- <h5>Total precio productos: $ {{totalPrecios}}</h5> -->
      <h5>Total precio productos desde api: $ {{totalPreciosApi}}</h5>
+</div>
+
+<!-- new FormControl editar -->
+<div>
+    <form [formGroup]="formEditarProducto" (ngSubmit)="guardarCambios()">
+        <label>Nombre:</label>
+        <input type="text" formControlName="title">
+
+        <label>Precio:</label>
+        <input type="number" formControlName="price">
+
+        <label>Stock:</label>
+        <input type="number" formControlName="stock">
+
+        <button type="submit" >Guardar</button>
+
+    </form>
 </div>
