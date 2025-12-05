@@ -10,6 +10,10 @@ export const routes: Routes = [
         loadComponent: () => import('./tabla-producto/tabla-producto').then(m => m.TablaProducto),
     },
     {
+        path:'productos-driven',
+        loadComponent: ()=>import('./tabla-productos-driven/tabla-productos-driven').then(m=>m.TablaProductosDriven)
+    },
+    {
         path:'**', redirectTo:'home'
     }
 ];

@@ -1,0 +1,49 @@
+<!-- tabla-productos.html -->
+<div class="container">
+
+    <div class="containerTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- productos desde api -->
+                @for (item of productosFromApi; track item) {
+                    <tr [class.sinStock] = "item.stock == 0">
+                        <td>{{item.title}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.stock}}</td>
+                        <td><button (click)="editarProducto(item)">editar✏️</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    
+        <!-- <h5>Total precio productos: $ {{totalPrecios}}</h5> -->
+        <h5>Total precio productos desde api: $ {{totalPreciosApi}}</h5>
+    </div>
+
+    <!-- Formulario de Plantilla (o Template-Driven Forms). editar -->
+    <div id="formularioEdicion">
+        <form #productoEditForm ="ngForm">
+            <label>Nombre:</label>
+            <input type="text" name="title" [(ngModel)]="productoEnEdicion.title">
+
+            <label>Precio:</label>
+            <input type="number" name="price" [(ngModel)]="productoEnEdicion.price">
+
+            <label>Stock:</label>
+            <input type="number" name="stock" [(ngModel)]="productoEnEdicion.stock">
+
+            <button type="submit" (click)="guardarEdicion()">Guardar</button>
+
+        </form>
+    </div>
+</div>
+
