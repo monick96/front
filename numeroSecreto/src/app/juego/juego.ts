@@ -9,7 +9,7 @@ import { log } from 'console';
   styleUrl: './juego.css',
 })
 export class Juego {
-  msg = "suerteee!";
+  msg = "Suerteee!🍀";
   inputNumber = 0;
   numeroMagico = this.generarNumeroRandom();
   gano = false;

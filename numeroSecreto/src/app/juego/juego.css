@@ -3,5 +3,20 @@
 }
 
 .ganadorMsg{
- color: rgb(0, 80, 7);
+ color: rgb(3, 124, 14);
+}
+
+button.btn-submit{
+    margin: 0.5rem;
+    background-color: rgb(163, 197, 103);
+    border-radius: 3px;
+    padding: 0.2rem;
+}
+
+h3{
+    text-align: center;
+}
+
+span{
+    font-weight: bolder;
 }

@@ -3,13 +3,13 @@
     <h3 class="resultMsg" [class.errorMsg]="error && jugando" [class.ganadorMsg]="gano">{{msg}}</h3>
 
     <form #adivinarNumero="ngForm">
-        <label >Ingrese un numero del 1 al 100:</label>
+        <label >Ingrese un numero del <span>1 al 100</span>:</label>
         <input type="number" name="inputNumber" [(ngModel)]="inputNumber">
 
         @if (gano) {
-            <button type="submit" (click)="reiniciarJuego()">Reiniciar Juego</button>
+            <button class="btn-submit" type="submit" (click)="reiniciarJuego()">Reiniciar Juego</button>
         }@else {
-            <button type="submit" (click)="jugar()">Enviar😬</button>
+            <button class="btn-submit" type="submit" (click)="jugar()">Enviar</button>
         }
          
     </form>

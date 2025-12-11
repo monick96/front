@@ -1,0 +1,23 @@
+ul li a{
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+    
+    margin: 1rem;
+
+}
+
+ul {
+    
+    display: flex;
+    align-content: start;
+    align-content: space-between;
+}
+
+ul li a:hover{
+    background-color: aliceblue;
+    color: black;
+    padding: 0.5rem;
+}
