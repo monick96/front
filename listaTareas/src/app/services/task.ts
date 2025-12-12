@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { randomInt, randomUUID } from 'crypto';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -11,6 +9,11 @@ export class Task {
       id:1,
       descripcion: "Estudiar Angular",
       completado:false
+    },
+    {
+      id:2,
+      descripcion: "Practicar Angular",
+      completado:true
     }
   ];
 
@@ -18,9 +21,13 @@ export class Task {
     return this.tareas;
   }
 
+  generarId(): number {
+    return Math.floor(Math.random() * 100000); 
+  }
+
   addTarea(descripcionTarea:string){
 
-    let idTarea = randomInt(500);
+    let idTarea = this.generarId();
 
     let nuevaTarea:Tarea ={
       id:idTarea,
@@ -32,12 +39,17 @@ export class Task {
     
   }
 
-  marcarTareaHecha(id:number){
+  cambiarEstadoTarea(id:number){
 
-    let tarea = this.tareas.find(tarea=>tarea.id == id)
-    tarea!.completado = true;
+    let tarea = this.getTareaById(id);
+    
+    tarea!.completado = !tarea!.completado;
 
-    this.guardarTarea(tarea!)
+    console.log("cambio estado tarea: " , tarea);
+  }
+
+  getTareaById(id:number){
+    return this.tareas.find(tarea=>tarea.id == id);
   }
 
   guardarTarea(tarea:Tarea){

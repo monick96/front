@@ -1,1 +1,19 @@
-<p>tarea-form works!</p>
+<section class="crear-tarea">
+    <form #formTarea="ngForm">
+        <label>Descripcion de la tarea:</label>
+        <input type="text" name="descripcion" [(ngModel)]="descripcion">
+        <button type="submit" (click)="crearTarea()">Agregar tarea</button>
+    </form>
+
+</section>
+<section class="lista-tareas">
+    <ul>
+        @for (tarea of listaTareas; track tarea) {
+            <li class="tarea-item" [class.completado] ="tarea.completado">
+                ID: {{tarea.id}} | Descripción: {{tarea.descripcion}} 
+                | Completado: <input type="checkbox" [checked]="tarea.completado" (click)="cambiarEstadoTarea(tarea.id)">
+            </li>
+        }
+    </ul>
+
+</section>
